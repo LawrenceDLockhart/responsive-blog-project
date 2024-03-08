@@ -8,9 +8,9 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
 @Route("/")
-public class MainLayout extends VerticalLayout {
+public class MainLayoutView extends VerticalLayout {
     private H2 viewTitle;
-    public MainLayout() {
+    public MainLayoutView() {
         var navbar =new HorizontalLayout(
                 new Button("Button 1"),
                 new Button("Button 2"),

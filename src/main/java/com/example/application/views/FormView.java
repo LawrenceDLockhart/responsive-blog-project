@@ -1,4 +1,4 @@
-package com.example.application.views.helloworld;
+package com.example.application.views;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.formlayout.FormLayout;
