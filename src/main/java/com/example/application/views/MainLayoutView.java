@@ -21,7 +21,7 @@ public class MainLayoutView extends VerticalLayout {
                 navbar,
                 new TextField("Title"),
                 new TextField("Name"),
-                new TextField("Em")
+                new TextField("Email")
         );
     }
 }
