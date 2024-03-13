@@ -1,15 +1,15 @@
 package com.example.application.views;
-import com.vaadin.flow.component.Text;
+
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.component.textfield.TextField;
-import com.vaadin.flow.router.Route;
 
 public class MainLayout extends AppLayout {
     public MainLayout() {
@@ -30,11 +30,13 @@ public class MainLayout extends AppLayout {
             // Handle menu item selection logic
             Notification.show("Selected: " + event.getSelectedTab().getLabel());
         });
-        var Buttons = new HorizontalLayout(
+        var buttons = new FlexLayout(
                 new Button("Button 1"),
                 new Button("Button 2"),
                 new Button("Button 3")
         );
+        buttons.setFlexDirection(FlexLayout.FlexDirection.ROW_REVERSE);
+
         var TextFields= new VerticalLayout(
                 new TextField("Title"),
                 new TextField("Name"),
@@ -42,7 +44,7 @@ public class MainLayout extends AppLayout {
         );
         // Add the header and menu components to the AppLayout
         addToNavbar(appName);
-        addToNavbar(Buttons);
+        addToNavbar(buttons);
         addToDrawer(menuTabs);
         addToDrawer(TextFields);
     }
